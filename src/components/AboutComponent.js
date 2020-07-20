@@ -16,7 +16,6 @@ function RenderLeader({leader}) {
                     </Media>
                 </Media>
             </div>
-            // designation, description
         );
 }
 
