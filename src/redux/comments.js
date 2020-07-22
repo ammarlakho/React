@@ -13,10 +13,6 @@ export const Comments = (state = {
         
         case ActionTypes.ADD_COMMENT:
             var comment = action.payload;
-            console.log(comment.author)
-            comment.id = state.comments.length;
-            comment.date = new Date().toISOString();
-            console.log("Comment: ", JSON.stringify(comment));
             return {...state, comments: state.comments.concat(comment)};
 
         default:
