@@ -173,11 +173,11 @@ const DishDetail = (props) => {
         );
     }
 
-    else if(props.errMess) {
+    else if(props.commentsErrMess) {
         return (
             <div className="container">
                 <div className="row">
-                    <h4>{props.errMess}</h4>
+                    <h4>{props.commentsErrMess}</h4>
                 </div>
             </div>
         );

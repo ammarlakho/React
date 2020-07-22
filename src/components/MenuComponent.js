@@ -25,7 +25,7 @@ import { baseUrl } from '../shared/baseUrl'
                 </div>
             );
         }); 
-
+        
         if (props.dishes.isLoading) {
             return (
                 <div className="container">

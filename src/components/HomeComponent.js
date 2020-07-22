@@ -4,12 +4,12 @@ import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl'
 
 function RenderCard({item, isLoading, errMess}) {
+    // alert(errMess)
     if(isLoading) {
         return (
             <Loading />
         );
     }
-
     else if(errMess) {
         return(
             <h4>{errMess}</h4>
