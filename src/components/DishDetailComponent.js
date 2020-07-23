@@ -2,7 +2,7 @@ import React, { Component }from 'react'
 import { Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem,
     Button, Modal, ModalHeader, ModalBody, Label, Row, Col} from 'reactstrap';
 import { LocalForm, Control, Errors } from 'react-redux-form';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
 import { FadeTransform, Fade, Stagger } from 'react-animation-components';
@@ -185,7 +185,7 @@ const DishDetail = (props) => {
         );
     }
 
-    else if(props.dish != null) {
+    else if(props.dish && props.comments) {
         return (
             <div className="container">
                 <div className="row">
@@ -202,9 +202,10 @@ const DishDetail = (props) => {
                             <RenderDish dish={props.dish} />
                         </div>
                         <div className="col-12 col-md-5 m-1">
-                        <RenderComments comments={props.comments} 
-                        postComment={props.postComment}
-                        dishId={props.dish.id}/>
+                        <RenderComments 
+                            comments={props.comments} 
+                            postComment={props.postComment}
+                            dishId={props.dish.id}/>
                         </div>
                     </div>
             </div>
