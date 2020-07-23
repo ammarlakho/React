@@ -85,8 +85,7 @@ class Main extends Component {
               <Redirect to="/home" />
             </Switch>
           </CSSTransition>
-        </TransitionGroup>
-        
+        </TransitionGroup>        
         <Footer />
       </div>
     );
